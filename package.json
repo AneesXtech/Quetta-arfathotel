@@ -1,0 +1,21 @@
+{
+  "name": "quetta-arfat-hotel",
+  "version": "1.0.0",
+  "description": "Quetta Arfat Hotel - Authentic Chai & Paratha Website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "quetta",
+    "arfat",
+    "alamgir",
+    "hotel",
+    "karachi",
+    "chai",
+    "paratha"
+  ],
+  "author": "Quetta Arfat Hotel",
+  "license": "ISC"
+}
