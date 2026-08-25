@@ -10,6 +10,135 @@
 }
 
 /* ==========================================================================
+   Hero Slider Banner Carousel
+   ========================================================================== */
+#hero-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background-color: #1a1413;
+}
+
+#hero-slider-track {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.hero-slider-slide {
+  min-width: 100%;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.hero-slider-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+#hero-prev-btn,
+#hero-next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  color: #1f2937;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 25;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#hero-prev-btn:hover,
+#hero-next-btn:hover {
+  background: #ffffff;
+  color: #000000;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+#hero-prev-btn:active,
+#hero-next-btn:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+#hero-prev-btn {
+  left: 18px;
+}
+
+#hero-next-btn {
+  right: 18px;
+}
+
+@media (max-width: 640px) {
+  #hero-prev-btn,
+  #hero-next-btn {
+    width: 34px;
+    height: 34px;
+  }
+  #hero-prev-btn {
+    left: 8px;
+  }
+  #hero-next-btn {
+    right: 8px;
+  }
+  #hero-carousel {
+    border-radius: 16px;
+  }
+}
+
+#hero-slider-dots {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 25;
+}
+
+.hero-dot {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-dot.dot-active {
+  width: 28px;
+  height: 8px;
+  border-radius: 9999px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.hero-dot.dot-inactive {
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background-color: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.hero-dot.dot-inactive:hover {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+/* ==========================================================================
    Product Card Component (Exact Malai Boti Reference Style)
    ========================================================================== */
 .menu-item-card {
