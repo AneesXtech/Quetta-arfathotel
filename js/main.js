@@ -529,7 +529,7 @@ function updateHeroSlider() {
   const track = document.getElementById('hero-slider-track');
   const dots = document.querySelectorAll('.hero-dot');
   if (track) {
-    track.style.transform = `translateX(-${currentHeroSlide * 100}%)`;
+    track.style.transform = `translateX(-${currentHeroSlide * 50}%)`;
   }
   dots.forEach((dot, idx) => {
     if (idx === currentHeroSlide) {
